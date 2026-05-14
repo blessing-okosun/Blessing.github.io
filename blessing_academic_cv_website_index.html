@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =========================================================
+       BASIC PAGE SETUP
+       Edit the title and description below if your site focus changes.
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blessing O. Okosun | Neurovascular Development & Bioinformatics</title>
+  <meta name="description" content="Blessing O. Okosun is a Ph.D. Candidate in Biology at the University of North Dakota studying neurovascular development, vascular-derived factors, leptin signaling, single-cell analysis, RNA-seq, and advanced imaging." />
+  <meta name="keywords" content="Blessing Okosun, Blessing O. Okosun, neurovascular development, developmental biology, leptin receptor, VEGF, single-cell RNA-seq, RNA-seq, confocal microscopy, University of North Dakota" />
+  <meta name="author" content="Blessing O. Okosun" />
+
+  <!-- =========================================================
+       OPEN GRAPH / SOCIAL PREVIEW
+       These control how the site appears when shared on LinkedIn,
+       Facebook, WhatsApp, etc.
+
+       Replace the og:url and og:image after GitHub Pages is live.
+  ========================================================== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME/" />
+  <meta property="og:title" content="Blessing O. Okosun | Ph.D. Candidate in Biology" />
+  <meta property="og:description" content="Research in neurovascular development, leptin receptor signaling, single-cell analysis, RNA-seq, and advanced imaging." />
+  <meta property="og:image" content="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME/profile.jpg" />
+
+  <!-- =========================================================
+       GOOGLE FONTS
+       This design uses a warm, minimal academic style.
+       Change fonts here if desired.
+  ========================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- =========================================================
+       FONT AWESOME ICONS
+       Used for subtle icons in contact/download buttons.
+  ========================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- =========================================================
+       EMBEDDED CSS
+       This keeps the website as one easy-to-edit file.
+       If preferred later, this CSS can be moved into styles.css.
+  ========================================================== -->
+  <style>
+    /* =========================================================
+       COLOR SYSTEM
+       Edit these variables to change the entire site's appearance.
+       Current theme: warm, minimal, inviting academic portfolio.
+    ========================================================== */
+    :root {
+      --bg: #fbf7f0;
+      --bg-soft: #f4eadf;
+      --card: #ffffff;
+      --text: #2d2925;
+      --muted: #6d645d;
+      --accent: #a85f45;
+      --accent-dark: #7e412c;
+      --accent-soft: #ead2c3;
+      --sage: #78866b;
+      --sage-soft: #e3e8dc;
+      --border: #e5d8cb;
+      --shadow: 0 18px 45px rgba(60, 48, 38, 0.08);
+      --radius: 22px;
+      --max-width: 1120px;
+    }
+
+    /* =========================================================
+       GLOBAL RESET AND BASE TYPOGRAPHY
+    ========================================================== */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 5.5rem 0;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      margin: 0 0 0.5rem;
+    }
+
+    .section-title {
+      font-family: "Lora", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      color: var(--text);
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      margin: 0 0 2rem;
+      font-size: 1.03rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--sage-soft);
+      color: #4f5d46;
+      border: 1px solid rgba(120, 134, 107, 0.24);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       NAVIGATION
+       The Downloads link appears early because the user wants
+       downloadable materials immediately after the introduction.
+    ========================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(251, 247, 240, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(229, 216, 203, 0.75);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo {
+      font-family: "Lora", serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--accent-dark);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.6rem 0.75rem;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       HERO / GENERAL INTRODUCTION
+    ========================================================== */
+    .hero {
+      padding: 6rem 0 4.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: "Lora", serif;
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 1.02;
+      margin: 1rem 0 0.9rem;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      color: var(--accent-dark);
+      font-weight: 800;
+      margin: 0 0 1.35rem;
+    }
+
+    .hero-text {
+      max-width: 780px;
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      border-radius: 999px;
+      padding: 0.78rem 1.15rem;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 12px 28px rgba(168, 95, 69, 0.2);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.55);
+      border-color: var(--border);
+      color: var(--accent-dark);
+    }
+
+    .profile-card {
+      background: linear-gradient(145deg, #ffffff, #f2e5da);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-img-wrap {
+      border-radius: 26px;
+      overflow: hidden;
+      background: var(--bg-soft);
+      aspect-ratio: 4 / 5;
+    }
+
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-note {
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    /* =========================================================
+       DOWNLOADS SECTION
+       Long documents are not displayed on the website.
+       Visitors can download them here.
+    ========================================================== */
+    .downloads {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .download-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none;
+      box-shadow: 0 10px 26px rgba(60, 48, 38, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .download-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .download-card i {
+      color: var(--accent);
+      font-size: 1.35rem;
+    }
+
+    .download-label {
+      display: inline-block;
+      width: fit-content;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      border-radius: 999px;
+      padding: 0.22rem 0.6rem;
+      font-size: 0.74rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+
+    .download-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .download-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    /* =========================================================
+       ABOUT / RESEARCH IDENTITY
+    ========================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .info-card,
+    .focus-card,
+    .publication-card,
+    .presentation-card,
+    .skill-card,
+    .award-card,
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: 0 10px 28px rgba(60, 48, 38, 0.05);
+    }
+
+    .info-card h3,
+    .focus-card h3,
+    .publication-card h3,
+    .presentation-card h3,
+    .skill-card h3,
+    .award-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.65rem;
+      color: var(--accent-dark);
+    }
+
+    .info-card p,
+    .focus-card p,
+    .publication-card p,
+    .presentation-card p,
+    .award-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* =========================================================
+       RESEARCH FOCUS
+    ========================================================== */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: var(--sage-soft);
+      color: #4f5d46;
+      border-radius: 999px;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       PUBLICATIONS
+       DOI and URL links are clickable and open in a new tab.
+    ========================================================== */
+    .publication-list,
+    .presentation-list,
+    .award-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .publication-card strong {
+      color: var(--text);
+    }
+
+    .doi-link,
+    .external-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+      color: var(--accent-dark);
+      font-weight: 800;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .doi-link:hover,
+    .external-link:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       TEACHING AND MENTORING
+    ========================================================== */
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .clean-list {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+    }
+
+    .clean-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* =========================================================
+       SKILLS
+       Skills were grouped from research experience, publications,
+       talks/posters, teaching, mentoring, and outreach.
+    ========================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+    }
+
+    .skill-card li {
+      margin-bottom: 0.45rem;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .contact-links a {
+      text-decoration: none;
+      color: var(--accent-dark);
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 2.2rem 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* =========================================================
+       RESPONSIVE DESIGN
+    ========================================================== */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .two-col,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .download-grid,
+      .skills-grid,
+      .focus-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .mobile-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 4%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .download-grid,
+      .skills-grid,
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 4rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- =========================================================
+       NAVIGATION
+       Edit menu items here if you add/remove sections.
+  ========================================================== -->
+  <nav class="navbar" aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Blessing O. Okosun</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Open navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       1. HERO / GENERAL INTRODUCTION
+       Keep this concise. This is the first impression.
+  ========================================================== -->
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-seedling"></i> Ph.D. Candidate in Biology</span>
+        <h1>Blessing O. Okosun</h1>
+        <p class="hero-subtitle">Neurovascular Development · Leptin Signaling · Single-cell & RNA-seq Analysis · Advanced Imaging</p>
+        <p class="hero-text">
+          I study how vascular-derived signals shape neural stem cell behavior and cortical development. My doctoral work focuses on the coordinated development of neural and vascular systems in the embryonic mouse cortex, with particular interest in VEGF isoforms, leptin/leptin receptor signaling, and cell-state transitions during early brain development.
+        </p>
+        <div class="hero-actions">
+          <a href="#downloads" class="btn btn-primary"><i class="fa-solid fa-file-arrow-down"></i> Download Materials</a>
+          <a href="#publications" class="btn btn-outline">View Publications</a>
+          <a href="mailto:Blessing.omoyemen@gmail.com" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- Replace profile.jpg with your preferred professional photo. -->
+      <aside class="profile-card" aria-label="Profile photo and location">
+        <div class="profile-img-wrap">
+          <img src="profile.jpg" alt="Portrait of Blessing O. Okosun" />
+        </div>
+        <p class="profile-note">
+          University of North Dakota · Department of Biology · Grand Forks, North Dakota
+        </p>
+      </aside>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       2. DOWNLOADS
+       This section intentionally comes immediately after the
+       general introduction, per user preference.
+
+       Important:
+       - Upload these PDF files to your GitHub repository.
+       - Make filenames match the href values exactly.
+       - The full CV/statement text is not placed on the page.
+  ========================================================== -->
+  <section class="downloads" id="downloads">
+    <div class="container">
+      <p class="section-kicker">Documents</p>
+      <h2 class="section-title">Download Materials</h2>
+      <p class="section-intro">
+        Full application materials are available here. These documents provide expanded details on my academic training, research program, teaching approach, mentoring philosophy, and professional experience.
+      </p>
+
+      <div class="download-grid">
+        <a class="download-card" href="Blessing_Okosun_CV.pdf" download>
+          <div>
+            <span class="download-label">Full CV</span>
+            <h3>Curriculum Vitae</h3>
+            <p>Complete academic record, including education, research, teaching, grants, awards, publications, presentations, outreach, and service.</p>
+          </div>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+        </a>
+
+        <a class="download-card" href="Blessing_Okosun_Resume.pdf" download>
+          <div>
+            <span class="download-label">Resume</span>
+            <h3>Professional Resume</h3>
+            <p>Condensed summary of research, technical skills, teaching, mentoring, and leadership experience.</p>
+          </div>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+        </a>
+
+        <a class="download-card" href="Blessing_Okosun_Research_Statement.pdf" download>
+          <div>
+            <span class="download-label">Statement</span>
+            <h3>Research Statement</h3>
+            <p>Research vision focused on neurovascular development, vascular-derived factors, leptin biology, and cortical development.</p>
+          </div>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+        </a>
+
+        <a class="download-card" href="Blessing_Okosun_Teaching_Statement.pdf" download>
+          <div>
+            <span class="download-label">Statement</span>
+            <h3>Teaching Statement</h3>
+            <p>Teaching philosophy, laboratory instruction experience, active-learning strategies, and inclusive teaching priorities.</p>
+          </div>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+        </a>
+
+        <a class="download-card" href="Blessing_Okosun_Mentoring_Statement.pdf" download>
+          <div>
+            <span class="download-label">Statement</span>
+            <h3>Mentoring Statement</h3>
+            <p>Mentoring philosophy centered on expectations, independence, communication, professional development, and student growth.</p>
+          </div>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. ABOUT / RESEARCH IDENTITY
+       This is a short narrative, not a full CV.
+  ========================================================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <p class="section-kicker">Profile</p>
+      <h2 class="section-title">Researcher, educator, and science communicator</h2>
+      <p class="section-intro">
+        My work combines developmental biology, molecular and cellular assays, microscopy, computational analysis, and science communication to understand how neural and vascular systems develop together.
+      </p>
+
+      <div class="about-grid">
+        <article class="info-card">
+          <h3>Current training</h3>
+          <p>
+            I am a Ph.D. Candidate in Biology at the University of North Dakota, advised by Dr. Diane Darland. My dissertation examines vascular-derived factors and their influence on the developing mouse cortex.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Scholarly tools</h3>
+          <p>
+            My work integrates single-cell and RNA-seq analysis, flow cytometry, immunolabeling, confocal microscopy, advanced imaging analysis, and experimental models of neural stem cell behavior.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. RESEARCH FOCUS
+       Keep this high-level and readable for broad audiences.
+  ========================================================== -->
+  <section class="research" id="research">
+    <div class="container">
+      <p class="section-kicker">Research Focus</p>
+      <h2 class="section-title">How vascular signals shape cortical development</h2>
+      <p class="section-intro">
+        My research asks how vascular-derived molecules influence neural stem cell fate and early cortical development. I focus on developmental windows when the embryonic mouse cortex transitions from a simple neuroepithelial structure toward layered, vascularized tissue.
+      </p>
+
+      <div class="focus-grid">
+        <article class="focus-card">
+          <h3>Neurovascular development</h3>
+          <p>
+            I investigate how neural and vascular systems coordinate during embryonic mouse cortical development, particularly during early periods of neural expansion, differentiation, and vascular investment.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Mouse cortex</span>
+            <span class="tag">Neural stem cells</span>
+            <span class="tag">Development</span>
+          </div>
+        </article>
+
+        <article class="focus-card">
+          <h3>VEGF and leptin signaling</h3>
+          <p>
+            My dissertation examines the regulatory roles of VEGF isoforms and leptin/leptin receptor signaling in neural stem cell fate and neurovascular interactions.
+          </p>
+          <div class="tag-row">
+            <span class="tag">VEGF</span>
+            <span class="tag">Leptin receptor</span>
+            <span class="tag">Cell fate</span>
+          </div>
+        </article>
+
+        <article class="focus-card">
+          <h3>Integrated experimental and computational analysis</h3>
+          <p>
+            I combine molecular assays, advanced imaging, flow cytometry, and transcriptomic approaches to connect cell behavior, tissue structure, and gene-expression patterns.
+          </p>
+          <div class="tag-row">
+            <span class="tag">RNA-seq</span>
+            <span class="tag">Single-cell</span>
+            <span class="tag">Imaging</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. SELECTED PUBLICATIONS
+       DOI links are clickable. Add more items as needed.
+       For in-review/in-preparation items, avoid fake DOI links.
+  ========================================================== -->
+  <section class="publications" id="publications">
+    <div class="container">
+      <p class="section-kicker">Scholarship</p>
+      <h2 class="section-title">Selected Publications</h2>
+      <p class="section-intro">
+        Selected peer-reviewed publications, manuscripts, and public science writing. The full publication and presentation record is available in the downloadable CV.
+      </p>
+
+      <div class="publication-list">
+        <article class="publication-card">
+          <h3>Fe<sup>3+</sup>-Doped Graphene Quantum Dots-Based Nanozyme for H<sub>2</sub>O<sub>2</sub> Detection in Cellular Metabolic Distress</h3>
+          <p>
+            Wu, Y., Combs, C., <strong>Okosun, B. O.</strong>, Tayutivutikul, K., Darland, D. C., & Zhao, J. X. (2025). <em>ACS Applied Nano Materials.</em>
+          </p>
+          <a class="doi-link" href="https://doi.org/10.1021/acsanm.4c06292" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> https://doi.org/10.1021/acsanm.4c06292
+          </a>
+        </article>
+
+        <article class="publication-card">
+          <h3>Multi-functional Near-infrared Fluorescent Polymer Dot–siRNA for Gene Expression Regulation</h3>
+          <p>
+            Sun, D., <strong>Okosun, B. O.</strong>, Xue, Y., Tayutivutikul, K., Smith, K. H., Darland, D. C., & Zhao, J. X. (2025). <em>Journal of Materials Chemistry B, 13</em>(6).
+          </p>
+          <a class="doi-link" href="https://doi.org/10.1039/D4TB01954G" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> https://doi.org/10.1039/D4TB01954G
+          </a>
+        </article>
+
+        <article class="publication-card">
+          <h3>Student-centered Approaches to Breaking Through Scientific Writing Barriers</h3>
+          <p>
+            Darland, D. C., Gisi, E. M., Hampton, J. R., Huang, H., Kantonen, L. M., Kong, D., LaFond, L. R., Martin, J. P., <strong>Okosun, B. O.</strong>, Westberg, L. M., & Young, L. C. (2024). <em>Journal of College Science Teaching.</em>
+          </p>
+          <a class="doi-link" href="https://doi.org/10.1080/0047231X.2024.2373022" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> https://doi.org/10.1080/0047231X.2024.2373022
+          </a>
+        </article>
+
+        <article class="publication-card">
+          <h3>An Unplanned Pregnancy Rocked My Ph.D. My Academic Village Helped Me Make It Through</h3>
+          <p>
+            <strong>Okosun, B.</strong> (2025). <em>Science.</em>
+          </p>
+          <a class="doi-link" href="https://doi.org/10.1126/science.zxqs65q" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> https://doi.org/10.1126/science.zxqs65q
+          </a>
+        </article>
+
+        <article class="publication-card">
+          <h3>Pan-cancer Analysis Reveals Context-dependent Prognostic Roles of PTEN Across Human Cancers</h3>
+          <p>
+            <strong>Okosun, B. O.</strong>, Mohammed, K. A., Owolabi, P. J., Khalid, A. S., Abusaad, H. E., Anifowose, A. S., & Alfaki, M. (2026). Submitted to <em>Discover Oncology</em>.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. SELECTED TALKS AND POSTERS
+       Keep this selective. The full list belongs in the CV PDF.
+  ========================================================== -->
+  <section class="presentations" id="presentations">
+    <div class="container">
+      <p class="section-kicker">Presentations</p>
+      <h2 class="section-title">Selected Talks & Posters</h2>
+      <p class="section-intro">
+        Selected presentations highlighting my work in leptin signaling, neural stem cell biology, neurovascular development, science communication, and STEM outreach.
+      </p>
+
+      <div class="presentation-list">
+        <article class="presentation-card">
+          <h3>From Metabolism to Vasculature: Leptin Effects on Brain Microvascular Endothelial Cells</h3>
+          <p>
+            North Dakota Academy of Science, 117th Annual Meeting, Fargo, ND. Oral presentation.
+          </p>
+        </article>
+
+        <article class="presentation-card">
+          <h3>Beyond Appetite: Leptin Orchestrates Critical Neural Stem Cell Differentiation</h3>
+          <p>
+            North Dakota Academy of Science, 116th Annual Meeting, University of North Dakota. Oral presentation.
+          </p>
+        </article>
+
+        <article class="presentation-card">
+          <h3>Environment Matters: Cortical Neural Stem Cells Display Differential Response to Vascular-derived Factor</h3>
+          <p>
+            Society of Developmental Biology Southwest Regional Meeting and Northern Plains Biological Symposium. Poster presentation.
+          </p>
+        </article>
+
+        <article class="presentation-card">
+          <h3>The Dual Regulatory Role of VEGF in Neural and Vascular Development in the Mouse Cortex</h3>
+          <p>
+            Graduate Research Achievement Day, University of North Dakota. Poster presentation.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. TEACHING AND MENTORING
+       The full teaching and mentoring statements are downloads.
+  ========================================================== -->
+  <section class="teaching" id="teaching">
+    <div class="container">
+      <p class="section-kicker">Teaching & Mentoring</p>
+      <h2 class="section-title">Supporting students through active learning and research mentorship</h2>
+      <p class="section-intro">
+        My teaching and mentoring work emphasizes clear expectations, active learning, inclusive communication, scientific confidence, and student growth.
+      </p>
+
+      <div class="two-col">
+        <article class="info-card">
+          <h3>Teaching experience</h3>
+          <ul class="clean-list">
+            <li>Graduate Teaching Assistant in the Department of Biology at the University of North Dakota.</li>
+            <li>Sole instructor for general biology and cell biology laboratory sections under faculty guidance.</li>
+            <li>Co-instructor support for genetics and cell biology courses, including case studies and active-learning activities.</li>
+            <li>Prior teaching experience in integrated science and elementary education.</li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h3>Mentoring and outreach</h3>
+          <ul class="clean-list">
+            <li>Mentored undergraduate students through research experiences and team presentations.</li>
+            <li>Co-developed and participated in the Mentors Helping Mentors graduate peer-mentoring program.</li>
+            <li>Served as a science fair judge for North Dakota regional and state-level competitions.</li>
+            <li>Participates in science communication and outreach through public writing, STEM programming, and student engagement.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       8. SKILLS AND METHODS
+       These are extracted from work, presentations, publications,
+       teaching, and outreach rather than generic keyword stuffing.
+  ========================================================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <p class="section-kicker">Technical Profile</p>
+      <h2 class="section-title">Skills & Methods</h2>
+      <p class="section-intro">
+        My skill set bridges wet-lab developmental biology, quantitative imaging, transcriptomics, computational analysis, teaching, mentoring, and science communication.
+      </p>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Bioinformatics & Data Analysis</h3>
+          <ul>
+            <li>Single-cell RNA-seq analysis</li>
+            <li>Bulk RNA-seq analysis</li>
+            <li>Differential gene expression analysis</li>
+            <li>Phylogenetic analysis</li>
+            <li>Genome-wide association study concepts</li>
+            <li>R-based data processing and visualization</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Imaging & Quantitative Microscopy</h3>
+          <ul>
+            <li>Confocal microscopy</li>
+            <li>Advanced fluorescence imaging</li>
+            <li>ImageJ/Fiji image analysis</li>
+            <li>Image-based phenotyping</li>
+            <li>Neural and vascular tissue imaging</li>
+            <li>Quantitative microscopy workflows</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Molecular & Cellular Biology</h3>
+          <ul>
+            <li>Neural stem cell models</li>
+            <li>Mouse embryonic cortical development</li>
+            <li>Flow cytometry</li>
+            <li>Immunolabeling</li>
+            <li>PCR and RT-qPCR</li>
+            <li>Co-culture and organoid models</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Nano-bio Applications</h3>
+          <ul>
+            <li>Nanozyme bioapplications</li>
+            <li>Hydrogen peroxide detection</li>
+            <li>Oxidative stress assays</li>
+            <li>Polymer dot-siRNA systems</li>
+            <li>Metabolic stress studies</li>
+            <li>Endothelial cell applications</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Teaching & Instruction</h3>
+          <ul>
+            <li>Biology laboratory instruction</li>
+            <li>Cell biology laboratory teaching</li>
+            <li>Genetics case-study support</li>
+            <li>Active-learning implementation</li>
+            <li>Student assessment and feedback</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Mentoring & Leadership</h3>
+          <ul>
+            <li>Undergraduate research mentoring</li>
+            <li>Peer mentoring program development</li>
+            <li>Scientific writing support</li>
+            <li>Presentation development</li>
+            <li>STEM outreach coordination</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Science Communication</h3>
+          <ul>
+            <li>Public science writing</li>
+            <li>Oral research presentations</li>
+            <li>Poster presentations</li>
+            <li>Science fair judging</li>
+            <li>Accessible STEM communication</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Research Themes</h3>
+          <ul>
+            <li>Neurovascular interactions</li>
+            <li>Vascular-derived factors</li>
+            <li>Leptin receptor biology</li>
+            <li>VEGF isoform function</li>
+            <li>Cortical development</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       9. AWARDS AND RECOGNITION
+       Keep selected highlights only. Full list remains in CV.
+  ========================================================== -->
+  <section class="awards" id="awards">
+    <div class="container">
+      <p class="section-kicker">Recognition</p>
+      <h2 class="section-title">Selected Awards & Honors</h2>
+      <p class="section-intro">
+        Selected recognition for research, science communication, and academic achievement.
+      </p>
+
+      <div class="award-list">
+        <article class="award-card">
+          <h3>1st Place, Graduate Oral Presentation</h3>
+          <p>North Dakota Academy of Science, 117th Annual Meeting, 2026.</p>
+        </article>
+
+        <article class="award-card">
+          <h3>Earwicker Award for Excellence in Research & Science Communication</h3>
+          <p>North Dakota Academy of Science, 116th Annual Meeting, 2025.</p>
+        </article>
+
+        <article class="award-card">
+          <h3>Best Poster Award</h3>
+          <p>Northern Plains Biological Symposium, University of North Dakota, 2024.</p>
+        </article>
+
+        <article class="award-card">
+          <h3>Gates Institute Travel Award</h3>
+          <p>Society of Developmental Biology Southwest Regional Meeting, 2024.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       10. CONTACT
+       Update email, LinkedIn, ORCID, and address as needed.
+  ========================================================== -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <p class="section-kicker">Contact</p>
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-intro">
+          I welcome conversations about neurovascular development, developmental biology, single-cell and RNA-seq analysis, advanced imaging, science communication, teaching, and mentoring.
+        </p>
+        <div class="hero-actions">
+          <a href="mailto:Blessing.omoyemen@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Me</a>
+          <a href="https://www.linkedin.com/in/blessing-okosun" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+
+      <aside class="contact-card">
+        <h3>Academic profile</h3>
+        <div class="contact-links">
+          <a href="mailto:Blessing.omoyemen@gmail.com"><i class="fa-solid fa-envelope"></i> Blessing.omoyemen@gmail.com</a>
+          <a href="https://www.linkedin.com/in/blessing-okosun" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn profile</a>
+          <a href="https://orcid.org/0009-0003-6247-3727" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i> ORCID: 0009-0003-6247-3727</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer>
+    <div class="container footer-inner">
+      <span>&copy; 2026 Blessing O. Okosun. All rights reserved.</span>
+      <span>Built as a warm, minimal academic portfolio.</span>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       EMBEDDED JAVASCRIPT
+       Handles mobile navigation. Kept small and easy to edit.
+  ========================================================== -->
+  <script>
+    const mobileToggle = document.getElementById("mobile-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    mobileToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    // Close mobile menu after clicking a link.
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+  </script>
+</body>
+
+</html>
