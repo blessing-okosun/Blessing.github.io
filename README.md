@@ -2,7 +2,7 @@
 
 This repository contains the source files for my academic CV and research portfolio website.
 
-## Website contents
+## Github page (Website) contents
 
 - General academic introduction
 - Downloadable CV and professional statements
@@ -13,12 +13,6 @@ This repository contains the source files for my academic CV and research portfo
 - Skills and methods
 - Contact information
 
-## Files
+## Link to the GitHub page
 
-- `index.html`: Main website file
-- `profile.png`: Profile image
-- `Blessing_Okosun_CV.pdf`: Full academic CV
-- `Blessing_Okosun_Resume.pdf`: Professional resume
-- `Blessing_Okosun_Research_Statement.pdf`: Research statement
-- `Blessing_Okosun_Teaching_Statement.pdf`: Teaching statement
-- `Blessing_Okosun_Mentoring_Statement.pdf`: Mentoring statement
+(https://blessing-okosun.github.io/Blessing.github.io/)
