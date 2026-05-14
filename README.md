@@ -16,7 +16,7 @@ This repository contains the source files for my academic CV and research portfo
 ## Files
 
 - `index.html`: Main website file
-- `profile.jpg`: Profile image
+- `profile.png`: Profile image
 - `Blessing_Okosun_CV.pdf`: Full academic CV
 - `Blessing_Okosun_Resume.pdf`: Professional resume
 - `Blessing_Okosun_Research_Statement.pdf`: Research statement
